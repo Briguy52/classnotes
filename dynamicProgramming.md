@@ -53,6 +53,8 @@ Solution Table
 
 *Note: can accomplish this with a hash table (see LeetCode's Two Sum one-pass lookup table solution)*
 
+Table has n-1 elements in it. 
+
 #### Running Time
 
 ```
@@ -60,3 +62,13 @@ T(n) = O(# of elements in table (n) * amount of time spent per entry)
      = O(n * 1) 
      = O(n)
 ```
+
+### Iterative Solution
+
+> All I have to do is fill in all the entries of the table. Even better, we can just go from left to right without having to do any recursive calculations! (Improvement on Memorized Search)
+
+```
+Fib(n)
+  if n≤1 return 1
+  Fib(0) = Fib(1) = 1
+  
