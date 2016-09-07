@@ -56,5 +56,7 @@ Solution Table
 #### Running Time
 
 ```
-T(n) = # of elements in table (n) * amount of time spent per entry 
+T(n) = O(# of elements in table (n) * amount of time spent per entry)
+     = O(n * 1) 
+     = O(n)
 ```
