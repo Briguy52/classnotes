@@ -133,7 +133,7 @@ shortest(v)
 
 #### Solution Table (see class notes for graph)
 
-          |s   | a   | b   | c   | d   | t
+vertex    |s   | a   | b   | c   | d   | t
 ---       |--- | --- | --- | --- | --- | ---
 distance  | 0   | 4   | 5   | 7   | 6 |  14
 
