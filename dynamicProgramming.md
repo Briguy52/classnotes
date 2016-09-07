@@ -40,11 +40,11 @@ T(n) = T(n-1) + T(n-2) + O(1)
 ```
 Fib(n)
   if n≤1 return 1
-  if n is "solved" return solution(n) // can accomplish this with a hash table (see LeetCode's Two Sum one-pass lookup table solution)
+  if n is "solved" return solution(n) 
   r = f(n-1) + f(n-2)
   mark n as solved, solution[n] = r
   return r 
 ```
-  
+*Note: can accomplish this with a hash table (see LeetCode's Two Sum one-pass lookup table solution)*
 
 
