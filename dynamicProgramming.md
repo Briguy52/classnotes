@@ -99,9 +99,9 @@ Fib(n)
 * **Source** = vertex with no edges directed towards it (possible to have multiple sources)
 * Edges generally will have weights 
 
-### Sample Problem
+### Sample DAG Problem
 
-> Given a DAQ, edge (i,j) with length W(i,j), want to find length of shortest path from s to t
+> Given a DAG, edge (i,j) with length W(i,j), want to find length of shortest path from s to t
 
 ### Recursive Solution
 
@@ -146,10 +146,18 @@ Note: if graph is *not* acyclic, you'll have an inf loop!
 **Subsequence:** subset of elements in the same order (not necessarily continuous)
 
 ```
-ex.
-a = 1,2,3,2,1
+ex. a = 1,2,3,2,1
+
   1,2,3, ok
   1,3,2 ok
   1,2,1 ok
   1,1,3 no
+  
 ```
+
+### Sample LCS Problem
+
+> Find the length of the LCS of a, b (a = 1,2,3,2,1 b = 2,3,1,4,1)
+> (in this case, the LCS is 2,3,1)
+
+
