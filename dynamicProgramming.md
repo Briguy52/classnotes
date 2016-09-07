@@ -24,3 +24,13 @@ Row    | 1      | 2                  | 3
 ---    | ---    | ---                | ---
 Calls  | Fib(7) | Fib(6), **Fib(5**) | **Fib(5)**, Fib(4), Fib(4), Fib(3) 
 
+(Wasting time calling for info you already have)
+
+`T(n) = T(n-1) + T(n-2) + O(1)`
+
+`     = O( (root(5) + 1) / 2 )^n )`
+
+*Note: you do **not** have to know how to get this*
+
+
+
