@@ -164,6 +164,7 @@ ex. a = 1,2,3,2,1
 (recall: look at the **last step** of the solution!)
 
 a = 1,2,3,2,**1**
+
 b = 2,3,1,4,**1**
 
 
