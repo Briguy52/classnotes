@@ -75,3 +75,13 @@ Fib(n)
     F(i) = F(i-1) + F(i-2)
   return F(n)
 ```
+
+### Dynamic Programming (DP)
+
+#### General idea
+
+> Save intermediate results to avoid repeated computation 
+
+#### Design a DP algorithm
+
+1. Identify important subproblems (ie make a table, list, matrix, etc.) to remember problems & solutions
