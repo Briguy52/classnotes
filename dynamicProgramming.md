@@ -99,6 +99,16 @@ Fib(n)
 * **Source** = vertex with no edges directed towards it (possible to have multiple sources)
 * Edges generally will have weights 
 
-### Problem
+### Sample Problem
 
-> Given a DAQ, edge (i,j) with length W(i,j), want to find shortest path from s to t
+> Given a DAQ, edge (i,j) with length W(i,j), want to find length of shortest path from s to t
+
+### Recursive Solution
+
+Shortest(v): length of shortest path from s to v
+
+**Think:** *What is the last step of the solution?* 
+
+Then, you can *undo* that step and give yourself a simpler subproblem!
+
+
