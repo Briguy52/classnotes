@@ -105,10 +105,10 @@ Fib(n)
 
 ### Recursive Solution
 
-Shortest(v): length of shortest path from s to v
+> Shortest(v): length of shortest path from s to v
 
-**Think:** *What is the last step of the solution?* 
+**Think: What is the last step of the solution?**
 
-Then, you can *undo* that step and give yourself a simpler subproblem!
+> Then, you can *undo* that step and give yourself a simpler subproblem!
 
 
