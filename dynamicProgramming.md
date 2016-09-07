@@ -45,7 +45,7 @@ Fib(n)
   mark n as solved, solution[n] = r
   return r 
 ```
-Solution Table
+#### Solution Table
 
 0   | 1   | 2   | 3   | ...
 --- | --- | --- | --- | --- 
@@ -86,3 +86,10 @@ Fib(n)
 
 > 1. Identify important subproblems (ie make a table, list, matrix, etc.) to remember problems & solutions
 > 2. Fill in table entries in a 'good' order 
+
+## Shortest Path in Directed Acyclic Graphs
+
+> Directed acyclic graph (DAG)
+
+* **Directed** = arrows on edges (one-way)
+* **Acyclic** = can never go in loops/revisit old nodes
