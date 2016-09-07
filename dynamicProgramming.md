@@ -167,6 +167,29 @@ a = 1,2,3,2,**1**
 
 b = 2,3,1,4,**1**
 
+len(a) = n, len(b) = m
 
+Q: Do a(n), b(m) (ie last elements) belong to the LCS?
 
+#### Case 1: because a(n) == b(m), it is possible that both of them are in the LCS 
+
+`LCS(a,b) = |----?----|1)`
+
+We know that the ? is both the LCS of the first 4 elements of a and b! 
+
+`? = LCS( a[1...n-1], b[1...m-1] )`
+
+#### Case 2: a(n) is not in LCS
+
+> Shorten a by removing a(n)
+
+`LCS(a,b) = LCS(a[1...n-1], b[1...m])`
+
+#### Case 3: b(m) is not in LCS
+
+> Shorten b by removing b(m)
+
+`LCS(a,b) = LCS(a[1...n], b[1...m-1])`
+
+We then look at all 3 cases and choose the longest one. 
 
