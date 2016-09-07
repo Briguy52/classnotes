@@ -105,10 +105,37 @@ Fib(n)
 
 ### Recursive Solution
 
-> Shortest(v): length of shortest path from s to v
-
 **Think: What is the last step of the solution?**
 
 > Then, you can *undo* that step and give yourself a simpler subproblem!
 
+ex. We know that the last step is going from **E** to **F**.
+
+```
+shortest(v) (length of shortest path from s to v)
+  if v = s return 0
+  return min(shortest(u) + W(u,v))
+```
+
+### Memorized Search
+
+```
+shortest(v)
+  if v = s return 0
+  if v is "solved" return distance[v]
+  r = inf
+  for u = 1 to n
+    if (u,v) is an edge, shortest(u) + W(u,v) < r
+      r = shortest(u) + W(u,v)
+  mark v as solved, distance[v] = r
+  return r
+```
+
+#### Solution Table (see class notes for graph)
+
+          |s   | a   | b   | c   | d   | t
+---       |--- | --- | --- | --- | --- | ---
+distance  | 0   | 4   | 5   | 7   | 6 |  14
+
+Note: if graph is *not* acyclic, you'll have an inf loop!
 
