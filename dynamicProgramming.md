@@ -16,7 +16,7 @@ Fib(n):
   return Fib(n-1) + Fib(n-2)
 ```
 
-### Running time?
+#### Running time?
 
 ex. Call Fib(7)
 
@@ -45,6 +45,16 @@ Fib(n)
   mark n as solved, solution[n] = r
   return r 
 ```
+Solution Table
+
+0   | 1   | 2   | 3   | ...
+--- | --- | --- | --- | --- 
+1   | 1   | 2   | 3   | ...
+
 *Note: can accomplish this with a hash table (see LeetCode's Two Sum one-pass lookup table solution)*
 
+#### Running Time
 
+```
+T(n) = # of elements in table (n) * amount of time spent per entry 
+```
