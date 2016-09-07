@@ -135,7 +135,21 @@ shortest(v)
 
 vertex    |s   | a   | b   | c   | d   | t
 ---       |--- | --- | --- | --- | --- | ---
-distance  | 0   | 4   | 5   | 7   | 6 |  14
+distance  | 0  | 4   | 5   | 7   | 6   |  14
 
 Note: if graph is *not* acyclic, you'll have an inf loop!
 
+## Longest Common Subsequence (LCS)
+
+> Input: 2 sequencs a = 1,2,3,2,1 b = 2,3,1,4,1
+
+**Subsequence:** subset of elements in the same order (not necessarily continuous)
+
+```
+ex.
+a = 1,2,3,2,1
+  1,2,3, ok
+  1,3,2 ok
+  1,2,1 ok
+  1,1,3 no
+```
