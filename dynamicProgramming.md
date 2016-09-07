@@ -16,7 +16,7 @@ Fib(n):
   return Fib(n-1) + Fib(n-2)
 ```
 
-*Running time?*
+### Running time?
 
 ex. Call Fib(7)
 
@@ -33,5 +33,18 @@ T(n) = T(n-1) + T(n-2) + O(1)
 
 *Note: you do not have to know how to get this*
 
+### Memorized Search
+
+> Tries to avoid doing intermediate work by remembering intermediate results
+
+```
+Fib(n)
+  if n≤1 return 1
+  if n is "solved" return solution(n) // can accomplish this with a hash table (see LeetCode's Two Sum one-pass lookup table solution)
+  r = f(n-1) + f(n-2)
+  mark n as solved, solution[n] = r
+  return r 
+```
+  
 
 
