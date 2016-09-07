@@ -84,4 +84,5 @@ Fib(n)
 
 #### Design a DP algorithm
 
-1. Identify important subproblems (ie make a table, list, matrix, etc.) to remember problems & solutions
+> 1. Identify important subproblems (ie make a table, list, matrix, etc.) to remember problems & solutions
+> 2. Fill in table entries in a 'good' order 
