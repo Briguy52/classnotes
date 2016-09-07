@@ -70,5 +70,8 @@ T(n) = O(# of elements in table (n) * amount of time spent per entry)
 ```
 Fib(n)
   if n≤1 return 1
-  Fib(0) = Fib(1) = 1
-  
+  F(0) = F(1) = 1 // where F is the lookup table
+  for i = 2 to n
+    F(i) = F(i-1) + F(i-2)
+  return F(n)
+```
