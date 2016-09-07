@@ -158,6 +158,7 @@ ex. a = 1,2,3,2,1
 ### Sample LCS Problem
 
 > Find the length of the LCS of a, b (a = 1,2,3,2,1 b = 2,3,1,4,1)
+
 > (in this case, the LCS is 2,3,1)
 
 
