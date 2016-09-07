@@ -8,7 +8,7 @@
 
 Q: How to compute F(n)? 
 
-*Recursive solution*
+### Recursive solution
 
 ```
 Fib(n):
