@@ -93,3 +93,12 @@ Fib(n)
 
 * **Directed** = arrows on edges (one-way)
 * **Acyclic** = can never go in loops/revisit old nodes
+
+![DAG](https://upload.wikimedia.org/wikipedia/commons/4/4b/Directed_acyclic_graph.svg)
+
+* **Source** = vertex with no edges directed towards it (possible to have multiple sources)
+* Edges generally will have weights 
+
+### Problem
+
+> Given a DAQ, edge (i,j) with length W(i,j), want to find shortest path from s to t
