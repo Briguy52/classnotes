@@ -111,3 +111,25 @@ producer() {
   sodaLock.release()
 }
 ```
+
+#### Producer- inf loop ok? Why/why not?
+
+> it's okay... wait has an **unlock** inside it!
+
+Review: what's inside `wait`? 
+
+```
+wait (lock) {
+  // next 3 lines must be done atomically
+  release lock // lock held on entry
+  put thread on wait queue
+  go to sleep
+  // after wakeup
+  acquire lock // lock held on exit
+}
+```
+
+#### Producer - sleep ok? Why/why not?
+
+> no, shouldn't hold lock while doing slow stuff 
+
