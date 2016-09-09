@@ -133,3 +133,10 @@ wait (lock) {
 
 > no, shouldn't hold lock while doing slow stuff 
 
+#### Can I always use broadcast instead of signal?
+
+> yes
+
+#### Why would signal be preferred?
+
+> won't wake up everyone (some can still sleep)
