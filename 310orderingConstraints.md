@@ -46,11 +46,22 @@ wait (lock) {
 }
 
 signal () { 
-  wakeup one waiter (if any) // atomic
+  wakeup one waiter (if any) // atomic, lock usually held
 } 
 
 broadcast () {
-  wakeup all waiters (if any) // atomic
+  wakeup all waiters (if any) // atomic, lock usually held 
 }
 ```
 
+#### CVs and invariant 
+
+> recall: invariants must be true when locks are released (e.g. room must be clean when open the door)
+
+User programs
+
+* make sure 'your room is clean' before wait (b/c wait releases the lock!)
+* lock may have changed hands
+* state may have changed b/w wait entry and exit (whole purpose of waiting)
+
+**Note:** always wrap `wait` inside of a `while` loop
