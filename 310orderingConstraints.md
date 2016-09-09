@@ -77,18 +77,37 @@ User programs
 
 ex. Soda producers and soda drinkers: how to avoid direct handoff? Answer: use vending machines as buffers!
 
-1. What are variables/shared state?
+1. What are variables/shared state? - Soda machine buffer, number of sodas in machine (≤ maxSodas)
+2. Locks? - 1 to protect all shared state (sodaLock)
+3. Mutual exclusion - Only one thread can use machine at a time (can't take out when putting in)
+4. Ordering Constraints - Consumer must wait if machine is empty (CV hasSoda), Producer must wait if machine is full (CV hasRoom)
 
-> Soda machine buffer, number of sodas in machine (≤ maxSodas)
+```
+consumer() {
+  sodaLock.acquire()
+  
+  while (machine.empty) {
+    hasSodaCV.wait(sodaLock) 
+  }
+  
+  take out soda
+  
+  hasRoomCV.signal()
+  
+  sodaLock.release()
+}
 
-2. Locks? 
-
-> 1 to protect all shared state (sodaLock)
-
-3. Mutual exclusion 
-
-> Only one thread can use machine at a time (can't take out when putting in)
-
-4. Ordering Constraints
-
-> Consumer must wait if machine is empty (CV hasSoda), Producer must wait if machine is full (CV hasRoom)
+producer() {
+  sodaLock.acquire()
+  
+  while(machine.isFull) {
+    hasRoomCV.wait(sodaLock)
+  }
+  
+  fill machine
+  
+  hasSodaCV.signal()
+  
+  sodaLock.release()
+}
+```
