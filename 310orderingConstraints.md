@@ -65,3 +65,30 @@ User programs
 * state may have changed b/w wait entry and exit (whole purpose of waiting)
 
 **Note:** always wrap `wait` inside of a `while` loop
+
+### Tips for using monitors
+
+1. List shared date needed for problem
+2. Figure out the locks (1 lock / group of shared date)
+3. Bracket code that uses shared data with lock/unlock
+4. Think about before/after conditions
+
+### Producer / Consumer Problem
+
+ex. Soda producers and soda drinkers: how to avoid direct handoff? Answer: use vending machines as buffers!
+
+1. What are variables/shared state?
+
+> Soda machine buffer, number of sodas in machine (≤ maxSodas)
+
+2. Locks? 
+
+> 1 to protect all shared state (sodaLock)
+
+3. Mutual exclusion 
+
+> Only one thread can use machine at a time (can't take out when putting in)
+
+4. Ordering Constraints
+
+> Consumer must wait if machine is empty (CV hasSoda), Producer must wait if machine is full (CV hasRoom)
