@@ -56,9 +56,9 @@ f = 1 2 2 3 4 3
 * case 1: the nth object is not in knapsack, remaining problem: capacity M, n-1 (same capacity, one less item)
 * case 2: the nth object is in the knapsack, remaining problem: capacity M - w(n), n-1 objects 
 
-f[i,j] = max possible weight if capacity == i, first j objects
+`f[i,j] = max possible weight if capacity == i, first j objects`
 
-f[i,j] = max( f[i, j-1], f[i-w(j), j-1] + w(j) ) 
+`f[i,j] = max( f[i, j-1], f[i-w(j), j-1] + w(j) ) `
 
 boundary f[i, 0] = 0 (no objects)
 boundary f[0, j] = 0 (no capacity)
@@ -71,5 +71,6 @@ boundary f[0, j] = 0 (no capacity)
 m = 10 
 w(1) = 6, v(1) = 8 // has more value with smaller weight
 w(2) = 7, v(2) = 6 // has more weight with smaller value
-```
 
+f[i,j] = max( f[i, j - 1], f[i - w(j), j - 1] + v(j) ) // can use w(j) instead of v(j) to opt. for weight!
+```
