@@ -103,3 +103,14 @@ void unc_leaves() {
 
 Note: Condition variables are *not booleans*! (Don't set them true/false, instead, the condition is whatever is in the if/while)  
   
+#### Would starvation be a problem?
+
+1. UNC enter A
+2. Duke enter x[wait]
+3. UNC enter B
+4. UNC leave A
+5. UNC enter C
+6. ...
+
+One solution- set a limit to how many UNC people can enter (e.g. after 5, wait for all to leave and then Duke can enter)
+
