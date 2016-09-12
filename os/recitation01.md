@@ -1,6 +1,6 @@
 ### Problem 1: Basic Producer/Consumer 
 
-> global state: number of seats n
+> global state: number of seats already reserved, `numSeats`
 
 > can have multiple people reserving at same time
 
