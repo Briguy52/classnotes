@@ -48,15 +48,15 @@ Fun fact: some high frequency trading firms will go into Java (or other programm
 
 int numDuke = 0;
 int numUnc = 0;
-CV hasDukeCV;
-CV hasUncCV;
+CV uncCV;
+CV dukeCV;
 Lock bathLock; 
 
 void duke_enter() {
   bathLock.lock();
   
   while(numUnc > 0) {
-    hasUncCV.wait(bathLock);
+    dukeCV.wait(bathLock);
   }
   
   numDuke += 1;
@@ -68,7 +68,7 @@ void unc_enter() {
   bathLock.lock();
   
   while(numDuke > 0) {
-    hasDukeCV.wait(bathLock);
+    uncCV.wait(bathLock);
   }
   
   numUnc += 1;
@@ -81,10 +81,10 @@ void duke_leaves() {
   
   numDuke -= 1;
   
-  hasDukeCV = (numDuke == 0);
+  if (numDuke == 0) {
+    uncCV.broadcast();
+  }
 
-  hasDukeCV.broadcast(); 
-  
   bathLock.unlock();
 }
 
@@ -93,9 +93,9 @@ void unc_leaves() {
   
   numUnc -= 1;
   
-  hasUncCV = (numUnc == 0);
-  
-  hasDukeCV.broadcast(); 
+  if (numUnc == 0) {
+    dukeCV.broadcast();
+  }
   
   bathLock.unlock();
 }
