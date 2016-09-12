@@ -193,3 +193,43 @@ We know that the ? is both the LCS of the first 4 elements of a and b!
 
 We then look at all 3 cases and choose the longest one. 
 
+### Recap from last time 
+
+#### Define a 'table' to save the result of subproblems (saves you time at cost of space)
+  
+* f[i,j] returns length of LCS for i,j
+
+#### Write a recursive formula 
+
+* assume we already know f[i-1, j-1], f[i-1, j], f[i, j-1]
+* if a(i) == b(j) f[i,j] = max(f[i-1, j-1], f[i-1, j], f[i, j-1])
+* if a(i) != b(j) = max(f[i-1, j], f[i, j-1])
+
+#### Boundary condition f[0, j] = 0, f[i, 0] = 0
+
+* initialize f[0, j], f[i, 0] = 0 ∀ i,j
+
+```
+for i = 1 to h
+  for j = 1 to m
+    f[i, j] = max(f[i-1, j], f[i, j-1])
+    if a(i) == b(j) and f([i-1, j-1] + 1 > f[i, j]) then
+      f[i, j] = f(i-1, j-1) + 1
+      
+``
+
+### Recontruct the solution'
+
+```
+if f[i,j] = f(i-1,j-1] + 1 and a(i) = b(j);
+  LCS(i,j) = LCS(i-1, j-1), a;
+if f[i,j] = f [i-1, j],
+  LCS(i,j( = LCS(i-1, j);
+
+
+if f[i,j] == 0 return;
+if f[i,j] == f[i-1, j] output (i-1, j);
+if f[i,j] == f[i, j-1] output (i, j-1);
+output(i-1, j-1);
+print(a(i));
+
