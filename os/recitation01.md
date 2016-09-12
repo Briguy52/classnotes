@@ -1,7 +1,8 @@
 ### Problem 1: Basic Producer/Consumer 
 
-// global state: number of seats n
-// can have multiple people reserving at same time
+> global state: number of seats n
+
+> can have multiple people reserving at same time
 
 ```
 void reserve(int n) {
