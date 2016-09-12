@@ -25,7 +25,7 @@ void cancel(int n) {
   
   cancelSeats(n)
   
-  hasSpaceCV.signal()
+  hasSpaceCV.broadcast() // wakes up all threads in the queue
   
   seatLock.release()
 }
