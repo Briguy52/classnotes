@@ -100,5 +100,6 @@ void unc_leaves() {
   bathLock.unlock();
 }
 ```
-  
+
+Note: Condition variables are *not booleans*! (Don't set them true/false, instead, the condition is whatever is in the if/while)  
   
