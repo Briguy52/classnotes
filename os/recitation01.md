@@ -21,7 +21,6 @@ void reserve(int n) {
   // reserve seats
   numSeats -= n;
   
-  seatCV.broadcast();
   seatLock.unlock()
 }
 
