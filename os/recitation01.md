@@ -5,31 +5,39 @@
 > can have multiple people reserving at same time
 
 ```
+Lock seatLock;
+CV seatCV;
+int numSeats = MAX;
+
+
 void reserve(int n) {
-  seatLock.acquire()
+  seatLock.lock();
   
   // asking for more than max → have to wait
-  while(numReserved + n ≥ MAX) {
-    hasSpaceCV.wait(seatLock)
+  while(numSeats < n) {
+    seatCV.wait(seatLock);
   }
   
-  reserveSeats(n) 
-
-  seatLock.release()
+  // reserve seats
+  numSeats -= n;
+  
+  seatCV.broadcast();
+  seatLock.unlock()
 }
 
 void cancel(int n) {
-  seatLock.acquire()
+  seatLock.lock();
   
   // don't need condition variable here b/c we assume they're using calls correctly
   
-  cancelSeats(n)
+  // return seats
+  numSeats += n;
   
-  hasSpaceCV.broadcast() // wakes up all threads in the queue
-  
-  seatLock.release()
+  seatCV.broadcast(); // wakes up all threads in the queue
+  seatLock.unlock();
 }
 
 ```
-  
+
+Fun fact: some high frequency trading firms will go into Java (or other programming language) and modify things to speed it up
   
