@@ -9,12 +9,11 @@ void reserve(int n) {
   
   // asking for more than max → have to wait
   while(numReserved + n ≥ MAX) {
-    wait
+    hasSpaceCV.wait(seatLock)
   }
   
   reserveSeats(n) 
-  hasSpaceCV.signal()
-  
+
   seatLock.release()
 }
 
