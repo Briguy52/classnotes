@@ -4,7 +4,7 @@
 
 > can have multiple people reserving at same time
 
-```
+```c
 Lock seatLock;
 CV seatCV;
 int numSeats = MAX;
