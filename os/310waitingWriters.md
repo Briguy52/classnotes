@@ -1,17 +1,19 @@
 # 9/14
 
-### Prioritizing waiting writers
+### Reader/Writers
+
+#### Prioritizing waiting writers
 
 * always safe to broadcast- sometimes safe to signal
 
 * broadcast to all readers, signal to other writer
 
-### When to use broadcast?
+#### When to use broadcast?
 
 * more than one thread might need to run (if writer leaves, waiting readers should be woken)
 * signal could wake up wrong thread
 
-### Reader/writer interface vs. standard locks
+#### Reader/writer interface vs. standard locks
 
 * R/W looks like locks (*Start = lock, *Finish = unlock)
 
@@ -69,7 +71,7 @@ down() {
 
 Note: value (above) can never be negative b/c only decremented when positive
 
-Sempahores can do three things
+#### Sempahores can do three things
 
 * set init value
 * up
@@ -105,3 +107,5 @@ A is guaranteed to wait for B to finish (doesn't matter if A or B first)
 Like a CV in which condition is `sem.value == 0`
 
 Can think of it as a 'prefab' condition variable with an internal condition 
+
+**Note: a bit harder to use (cannot specify the condition variable)**
