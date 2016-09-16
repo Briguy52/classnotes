@@ -153,5 +153,12 @@ project one: 3-5 in `swapcontext`
 
 fun fact: can't go from ready to blocked (have to be running to be blocked)
 
+### Creating a new thread
+> also called 'forking'
 
+1. allocate new TCB
+2. allocate new stack
+3. make it look like thread was about to call function
+
+project one: use `makecontext`
 
