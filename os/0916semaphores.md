@@ -72,24 +72,24 @@ no, not for correctness
 
 #### play analogy
 
-* process is a play performance
-* program is the play's script
-* one cpu is a one person show
+> * process is a play performance
+> * program is the play's script
+> * one cpu is a one person show
 
 #### what is a non-running thread?
 
-* thread = sequence of executing instructions
-* non-running thread = paused execution
+> * thread = sequence of executing instructions
+> * non-running thread = paused execution
 
 #### must save thread's private steate
-* to re-run, need to reload private state
-* want thread to start where it left off 
-* thread shouldn't even 'know' that it was paused
+> * to re-run, need to reload private state
+> * want thread to start where it left off 
+> * thread shouldn't even 'know' that it was paused
 
 #### what state is private to each thread?
-* has own PC (location in script)
-* has own stack, SP
-* has own registers
+> * has own PC (location in script)
+> * has own stack, SP
+> * has own registers
 
 
 
