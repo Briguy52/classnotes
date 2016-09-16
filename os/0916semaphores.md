@@ -59,5 +59,39 @@ no, not for correctness
 * monitors are more flexible (conditions in while loop, sempahores have it predefined- lock when 0)
 * monitor condition can be read easily in code
 
+#### when to use semaphores?
+
+> shared integer maps naturally to problem (ex. counting stuff)
+
+## ok now how do we implement this stuff? 
+
+### thread facts
+
+1. threads share physical memory
+2. threads share one or more cpus (hardware)
+
+#### play analogy
+
+* process is a play performance
+* program is the play's script
+* one cpu is a one person show
+
+#### what is a non-running thread?
+
+* thread = sequence of executing instructions
+* non-running thread = paused execution
+
+#### must save thread's private steate
+* to re-run, need to reload private state
+* want thread to start where it left off 
+* thread shouldn't even 'know' that it was paused
+
+#### what state is private to each thread?
+* has own PC (location in script)
+* has own stack, SP
+* has own registers
+
+
+
 
 
