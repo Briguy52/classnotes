@@ -117,3 +117,30 @@ wealth front's list of companies
 angellist
 
 breakout list
+
+### resumes
+
+#### hooks
+
+* gpa is hook but not the strongest hook
+* research project, personal project, Hackathon projects
+* work experience (brands)
+* schools
+* you get a lot of credit for having something in production
+* accountability + maintenance
+
+#### finding opportunities
+
+* education (course work)
+* work experience
+* languages - prior experience/proficient
+* ideally has **metrics**
+
+helped make tool x for team vs helped make tool x for team that reduced work time by y hours
+refined algorithm vs decreased algorithm runtime by 5x
+
+talk about the **impact** you had, less about what you did
+
+#### road is long but not really
+
+github vs gethelp
