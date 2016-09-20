@@ -144,3 +144,7 @@ talk about the **impact** you had, less about what you did
 #### road is long but not really
 
 github vs gethelp
+
+judy zhuo - medium/fb
+product hunt
+kara swisher
