@@ -108,10 +108,11 @@ RQ = {T1 T2}
 LQ = {T3}
 T0 is running and owns the lock
 
-T0 calls unlock()
-* disables interrupts
-* set value to FREE
-* T3 calls lock (???)
+T3 already in LQ --> already tried to get LQ before (and thus 'deserves' the lock more than T3, T2, etc.)
+
+* T0 calls unlock(), sets lock to busy
+* Re-enables interrupts
+* T0 yields, goes to end of RQ
 * checks if anyone waiting for lock - T3 moves to end of ready queue
 * T1 is now running
 * T1 calls lock(), disables interrupts
@@ -143,3 +144,21 @@ Who might get the lock if it weren't handed off directly?
 
 > Separate queues make this a lot more easy to reason with
 
+#### In project one
+
+We have to do this! (guarantee FIFO ordering of lock operations)
+
+#### Clarify locks
+
+* Guarantee mutual exclusion for a critical section (of code)
+* NOT GUARANTEED running on CPU
+
+Call switch with interrupts off to make it atomic
+
+#### Lock can assume
+* interrupts are disabled
+* next thread to run becomes responsible for re-enabling interrupts
+
+#### Invariants
+* disable interrupts before swapcontext
+* re-enable interrupts before running user code
