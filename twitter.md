@@ -36,7 +36,7 @@ check out recode/domain expert websites
 * you can't network yourself into a job w/o the skills
 * social time vs 'training' time
 
-judy cho (?) fb director of design
+julie zhuo (?) fb director of design
 
 #### How do you become [insert role here]?
 > the best way to do it, is to do it (ie projects)
@@ -145,6 +145,6 @@ talk about the **impact** you had, less about what you did
 
 github vs gethelp
 
-judy zhuo - medium/fb
+julie zhuo - medium/fb
 product hunt
 kara swisher
