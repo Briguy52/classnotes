@@ -139,5 +139,9 @@ Pay back money
 
 > Many resources aren't 'fungible' (ie money is fungible but locks may not be)
 
+### Course Administration
 
+* Review most recent lectures
+* Several puzzles to solve on your own
+* Extra office hours begin next week
 
