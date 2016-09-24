@@ -43,3 +43,22 @@ ReactDOM.render(
  document.getElementById('container') 
  );
 ```
+
+### Props and State
+
+Don't use state unless there's interaction. You can and should pass props from parents to children
+
+Highest level component (for example, the entire table component) can receive a prop corresponding to all the data. It then gets to pass parts of that down to the other components. 
+
+Note: React has a **one way data flow (binding)**
+
+#### Building- bottom or top?
+
+For simple projects, you can do top down
+
+For larger projects, it's better to start from the bottom and write tests before combining things
+
+#### Updating
+
+Calling `ReactDOM.render()` re-renders the static site 
+
