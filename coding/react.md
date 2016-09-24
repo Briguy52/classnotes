@@ -62,3 +62,54 @@ For larger projects, it's better to start from the bottom and write tests before
 
 Calling `ReactDOM.render()` re-renders the static site 
 
+### Brief example- `Application.js` 
+
+See change [here](https://github.com/hack-duke/hackduke-portal/commit/a65d4414d55175bd8d51f202fdf67c81da89e5ae)
+
+#### Before
+
+```
+componentWillReceiveProps() {
+  // bind to typeform submission
+  // make call to server (every time props change)
+}
+```
+
+#### After
+
+```
+constructor() {
+  // bind to typeform submission
+  // make call to server (once)
+}
+```
+
+Read about adding state [here](https://facebook.github.io/react/docs/interactivity-and-dynamic-uis.html)
+
+### General ideas about state
+
+Create some state in your constructor:
+
+```
+this.state = {
+ liked: false
+}
+``` 
+
+Modify (set) state with `setState(data, callback)`:
+
+`this.setState({liked: !this.state.liked});`
+
+#### Keep as many components stateless as possible!
+
+One pattern- have stateless components display data and a state component above that passes in state as props
+
+#### What goes in state?
+
+Small things that would trigger a UI update
+
+#### What shouldn't go in state? 
+
+1. Computed data (do this in render()) 
+2. Components
+3. Duplicate info from props
