@@ -19,3 +19,27 @@ Which corresponds to a little component hierarchy like this:
     * `ProductTable`
       * `ProductCategoryRow`
       * `ProductRow`
+
+## Step 2: Build a static version in React
+
+Start by defining all your components
+
+```
+var myComponent = React.createClass({
+ render function() {
+  const TITLE_TEXT = 'Welcome!'
+  var name = <span style={{'color': 'red'}}> {this.props.product.name} </span>;
+  return (
+    <h1> {TITLE_TEST} </h1>
+    <div> {name} </div>
+   );  
+  }  
+)};
+
+var PRODUCT = {name: 'Womp', info: 'hello hello'}
+
+ReactDOM.render(
+ <myComponent product={PRODUCT}>
+ document.getElementById('container') 
+ );
+```
