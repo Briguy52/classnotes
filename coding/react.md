@@ -113,3 +113,31 @@ Small things that would trigger a UI update
 1. Computed data (do this in render()) 
 2. Components
 3. Duplicate info from props
+
+## Step 3: Identifying minimal representation of UI state
+
+### Ask 3 questions
+
+#### 1. Is it passed from parent as a prop? 
+
+> Not state
+
+#### 2. Does it remain unchanged?
+
+> Not state
+
+#### 3. Can you compute it from other props or data?
+
+> Not state
+
+(kinda like functional dependencies hahaha)
+
+## Step 4: Where should your state live?
+
+For a given piece of state (ex. search text) figure out which components use it
+
+If there's multiple, is there a shared parent that can house the state and pass it down as a prop?
+
+Pro tip: add a `getInitialState()` method that returns what the state is at the start!
+
+
