@@ -141,3 +141,12 @@ If there's multiple, is there a shared parent that can house the state and pass 
 Pro tip: add a `getInitialState()` method that returns what the state is at the start!
 
 
+## Step 5: Inverse data flow 
+
+> Modify search bar to change higher level state
+
+State holder needs to pass a callback function to search bar 
+
+Search bar uses `onChange` to call callback function and update the state 
+
+
