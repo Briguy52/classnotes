@@ -31,7 +31,7 @@ idk check slides
 
 ## Semaphores vs. Mutex - what's the difference?
 
-### pattern
+### Looks the same... right?
 
 ```
 mutex.acquire()
@@ -49,3 +49,12 @@ semaphore.down()
 .
 semaphore.up()
 ```
+NOT THE SAME!!!
+
+### Mutexes are *coupled*
+
+`mutex.acquire()` called --> HAVE TO call `mutex.release()`
+
+likewise, cannot call `mutex.release()` without having called `mutex.acquire()` first
+
+Creates a symmetry
