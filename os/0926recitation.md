@@ -24,3 +24,28 @@
 4. Circular chain of requests? No, because only going one direction (won't want to acquire N/S lock if you're going W/E)
 
 So no deadlocks!!
+
+## Control Flow Graph and locks
+
+idk check slides
+
+## Semaphores vs. Mutex - what's the difference?
+
+### pattern
+
+```
+mutex.acquire()
+.
+.
+.
+mutex.release()
+```
+
+
+```
+semaphore.down()
+.
+.
+.
+semaphore.up()
+```
