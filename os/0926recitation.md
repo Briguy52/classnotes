@@ -4,7 +4,7 @@
 
 ### 1. A mutex keps track of the threads waiting to acquire it in a queue
 
-> Each mutex has *its own* queue
+> Each mutex has *its own* queue (lock queue not ready queue)
 
 > Mutex is just a lock
 
