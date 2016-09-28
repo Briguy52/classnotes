@@ -56,5 +56,29 @@ sort jobs with bubble sort kinda
 * Can be unfair
 * Requires knowledge of the future
 
+### Knowledge of the future
 
+#### Examples
+
+* Caching
+* Banker's algo
+
+How do you know how much time jobs take?
+
+* Ask the user
+* Distribution and guess
+
+### Grocery Store Scheduling
+
+How do grocery stores schedule?
+
+Kinda like FCFS
+
+Express lanes - make it kind of like STCF
+
+No context switching/pre-emptions (people think unfair)
+
+### Final Example - Disk/CPU
+
+Good principle - start things that can be parallelized early! (ex. cooking)
 
