@@ -82,3 +82,51 @@ No context switching/pre-emptions (people think unfair)
 
 Good principle - start things that can be parallelized early! (ex. cooking)
 
+## Real Time Systems
+
+#### Typical hardware constraints
+
+* Slow, low-power processors
+* Small memories
+* Little to no persistent storage
+
+#### Typical workload
+
+* Periodic sensing and actuation
+* Task periodicity --> deadlines (ex. self-driving car)
+
+### Real time scheduling
+
+Worst-case analysis 
+
+#### How do we meet all of our deadlines? o.O
+
+> Optimal strategy: work on what's due first (earliest deadline first - EDF)
+
+> Sometimes have to drop tasks
+
+### Earliest deadline first (EDF)
+
+### Priority scheduling
+
+* nasa mars rover example 
+* high priority tasks stuck behind lower priorities 
+* weather should have inherited bus' priority (b/c bus was waiting on weather)
+
+### Lottery scheduling
+
+> tasks are assigned tickets (% of tickets represents share of resource)
+
+ex. A gets 75 tickets, B gets 25 tickets
+
+To schedule A and B, hold a lottery (so choose a random number b/w 0, 99, whoever has the winning ticket runs)
+
+#### Pros
+
+Lotteries can be fast, require little state
+
+Proportional shift
+
+Tickets can be dynamically assigned 
+
+
