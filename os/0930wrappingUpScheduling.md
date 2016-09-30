@@ -150,3 +150,29 @@ Customer() {
   lock release
 }
 
+```
+
+### Project 1 (test cases)
+
+* very narrow
+* no inputs
+* no preemptions 
+* write test cases to stress each required part
+* ex. lock() blocks if lock is already held
+* use yield() to get interleavings (b/c no preemptions)
+* read through your code and write test cases to exercise all lines of code (ex. each clause of an if/else statement)
+
+#### Garbage collection
+* Need to garbage collect threads
+* Don't want to run out of memory
+* Delete stack
+* Delete uncontext
+
+#### When can stack be deleted?
+* When it's done with its 'work' (ie func passed in)
+* Thread definitely cannot delete its own stack
+* Who can delete the stack
+
+#### Hint: don't use uc_link
+* Only use set/swapcontext to jump to threads
+
